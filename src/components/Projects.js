@@ -2,11 +2,7 @@ import React from 'react';
 
 function Projects() {
   const projectList = [
-    {
-      name: 'FormulAI',
-      description: 'An AI-driven formula generator which preprocesses the excel file you upload, data scrapes, and gives you ANY formula upon your command.',
-      link: 'https://formulai-mjtr.onrender.com/' // AI Chatbot link
-    },
+    
     {
       name: 'Scriptora',
       description: 'A web-based platform for code collaboration and chat integration.',
@@ -21,7 +17,12 @@ function Projects() {
       description: "Stitch utilizes Twitch TV's API and hosts streamers and incorporates tracked watch time to earn free cash!",
       link: 'https://stitch-tv.onrender.com/', // Stitch project link
       
-    }
+    },
+    {
+      name: 'FormulAI',
+      description: 'An AI-driven formula generator which preprocesses the excel file you upload, data scrapes, and gives you ANY formula upon your command.',
+      link: 'https://formulai-mjtr.onrender.com/' // AI Chatbot link
+    },
   ];
 
   return (
