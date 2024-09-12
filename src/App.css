@@ -259,9 +259,9 @@ p.footer {
   }
 
   /* Project and Language List: Stack Vertically on Small Screens */
-  .project-list, .language-list {
-    flex-direction: column;
-    align-items: center; /* Center items for a clean look */
+ .project-list, .language-list {
+    flex-direction: column; /* Change to vertical stacking */
+    align-items: stretch; /* Ensure items fill the width */
   }
 
   /* Project and Language Cards */
