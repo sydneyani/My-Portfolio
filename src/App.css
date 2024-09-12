@@ -74,10 +74,10 @@ p.footer {
 
 .project, .language {
   background-color: #fff;
-  padding: 1rem; /* Reduced padding */
-  margin: 0.5rem; /* Reduced margin */
+  padding: 1rem;
+  margin: 1rem;
   border-radius: 8px;
-  flex: 1 1 calc(30% - 1rem); /* Adjusted size for smaller boxes */
+  flex: 1 1 calc(33% - 2rem);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
@@ -88,7 +88,7 @@ p.footer {
 
 .language {
   text-align: center;
-  font-size: 1.1rem; /* Slightly reduced font size */
+  font-size: 1.1rem;
   font-weight: bold;
   color: #2e8b57;
 }
@@ -134,24 +134,20 @@ p.footer {
   text-decoration: underline;
 }
 
-/* Mobile Styling */
+/* Mobile Styling - Remove Flexbox for Projects and Languages */
 @media (max-width: 768px) {
-  .project-list, .language-list {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
+  /* Project and Language: Use the same layout as Experience */
   .project, .language {
-    flex: 1 1 100%;
-    margin: 0.5rem 0; /* Stack vertically with margin */
+    width: 100%; /* Full width */
+    flex: none; /* Remove flexbox behavior */
+    margin: 1rem 0; /* Stack vertically */
   }
 
-  /* Section Padding */
+  /* For smaller devices, shrink padding and margins */
   section {
     padding: 1.5rem;
   }
 
-  /* Font Sizes */
   h2 {
     font-size: 1.5rem;
   }
@@ -188,17 +184,17 @@ p.footer {
   justify-content: space-between;
 }
 
-.experience-tile {
+.experience-tile, .project, .language {
   background-color: #fff;
-  padding: 1rem; /* Reduced padding */
-  margin: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
   border-radius: 8px;
-  flex: 1 1 calc(45% - 2rem);
+  width: calc(100% - 2rem); /* Ensure full width */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
-.experience-tile:hover {
+.experience-tile:hover, .project:hover, .language:hover {
   transform: scale(1.05);
 }
 
