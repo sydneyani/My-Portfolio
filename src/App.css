@@ -241,3 +241,68 @@ p.footer {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+/* General Mobile Styling */
+@media (max-width: 768px) {
+  /* Header */
+  header h1 {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  header p {
+    font-size: 1rem; /* Smaller subtitle */
+  }
+
+  /* About Section Text */
+  .about-text {
+    font-size: 1rem; /* Smaller text */
+    margin-right: 0; /* Remove extra margin */
+  }
+
+  /* Project and Language List: Stack Vertically on Small Screens */
+  .project-list, .language-list {
+    flex-direction: column;
+    align-items: center; /* Center items for a clean look */
+  }
+
+  /* Project and Language Cards */
+  .project, .language, .experience-tile {
+    flex: 1 1 100%; /* Full width on small screens */
+    margin: 1rem 0; /* Stack vertically */
+  }
+
+  /* Padding and Margins for Sections */
+  section {
+    padding: 1.5rem; /* Reduce padding for smaller screens */
+    margin: 1rem auto; /* Less margin */
+  }
+
+  /* Font Sizes */
+  h2 {
+    font-size: 1.5rem; /* Reduce section title size */
+  }
+
+  p {
+    font-size: 0.9rem; /* Smaller paragraph font */
+  }
+}
+
+/* For Very Small Screens (like phones) */
+@media (max-width: 480px) {
+  /* Further reduce padding and font sizes */
+  section {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .project, .language, .experience-tile {
+    margin: 0.5rem 0; /* Stack even tighter */
+  }
+
+  /* Footer Font Size */
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
