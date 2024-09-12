@@ -74,10 +74,10 @@ p.footer {
 
 .project, .language {
   background-color: #fff;
-  padding: 1.5rem;
-  margin: 1rem;
+  padding: 1rem; /* Reduced padding */
+  margin: 0.5rem; /* Reduced margin */
   border-radius: 8px;
-  flex: 1 1 calc(33% - 2rem);
+  flex: 1 1 calc(30% - 1rem); /* Adjusted size for smaller boxes */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
@@ -88,7 +88,7 @@ p.footer {
 
 .language {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.1rem; /* Slightly reduced font size */
   font-weight: bold;
   color: #2e8b57;
 }
@@ -136,15 +136,19 @@ p.footer {
 
 /* Mobile Styling */
 @media (max-width: 768px) {
-  /* Project and Language List: Stack Vertically on Small Screens */
   .project-list, .language-list {
     flex-direction: column;
     align-items: stretch;
   }
 
   .project, .language {
-    width: 100%; /* Ensure full width */
-    margin: 1rem 0; /* Stack vertically with margin */
+    flex: 1 1 100%;
+    margin: 0.5rem 0; /* Stack vertically with margin */
+  }
+
+  /* Section Padding */
+  section {
+    padding: 1.5rem;
   }
 
   /* Font Sizes */
@@ -154,11 +158,6 @@ p.footer {
 
   p {
     font-size: 0.9rem;
-  }
-
-  /* Section Padding */
-  section {
-    padding: 1.5rem;
   }
 }
 
@@ -191,8 +190,8 @@ p.footer {
 
 .experience-tile {
   background-color: #fff;
-  padding: 1.5rem;
-  margin: 1rem;
+  padding: 1rem; /* Reduced padding */
+  margin: 0.5rem;
   border-radius: 8px;
   flex: 1 1 calc(45% - 2rem);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -259,7 +258,7 @@ p.footer {
 /* Ensure the inner content still retains its white background and proper styles */
 .project, .language-list div {
   background-color: #fff;
-  padding: 1.5rem;
+  padding: 1rem;
   margin: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
