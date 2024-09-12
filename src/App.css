@@ -1,38 +1,243 @@
-.App {
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+
+header {
+  background-color: #1a1a1a;
+  color: white;
   text-align: center;
+  padding: 3rem 1rem;
+  width: 100vw; /* Ensure the header fills the width */
+  position: relative; /* Make sure it sticks to the top */
+  left: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  font-size: 3rem;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header p {
+  font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+section {
+  width: 90%;
+  max-width: 1200px;
+  padding: 2rem;
+  margin: 2rem auto;
+  background-color: #458368;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #2e8b57;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p.footer {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #dadada;
+}
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Project and Language Cards */
+.project-list, .language-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project, .language {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 8px;
+  flex: 1 1 calc(33% - 2rem);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover, .language:hover {
+  transform: scale(1.05);
+}
+
+.language {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+/* Footer */
+/* Footer Styles */
+.footer {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.footer p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.footer .social-link {
+  color: #fff; /* White for LinkedIn text and icon */
+  text-decoration: none;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer .social-link i {
+  margin-right: 0.5rem;
+  font-size: 1.5rem; /* Adjust icon size */
+  color: #0077b5; /* LinkedIn blue color */
+  transition: transform 0.3s ease;
+}
+
+.footer .social-link:hover i {
+  transform: scale(1.1); /* Icon grows slightly on hover */
+}
+
+.footer .social-link:hover {
+  color: #ccc; /* Lighten the link color on hover */
+  text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-list, .language-list {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .project, .language {
+    flex: 1 1 100%;
   }
+}
+/* Styling for project links */
+.project a {
+  color: #2e8b57; /* A distinct color for the title */
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline; /* Only title gets underlined on hover */
+}
+
+.project p {
+  color: #333; /* Regular text for description */
+  margin: 0.5rem 0;
+  text-decoration: none; /* No underline for the description */
+}
+
+/* Experience Tiles */
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.experience-tile {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 8px;
+  flex: 1 1 calc(45% - 2rem); /* Adjust this based on the number of columns you want */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-tile:hover {
+  transform: scale(1.05); /* Adds a pop-out effect on hover */
+}
+
+.experience-tile h3 {
+  color: #2e8b48;
+}
+
+.experience-tile p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.experience-tile ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
+.experience-tile ul li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.about-image {
+  flex: 0 1 150px;
+}
+
+.about-image img {
+  width: 120%;
+  border-radius: 50%;
+  box-shadow: 0 15px 15px rgba(0, 255, 30, 0.1);
+  background-color: black;
+}
+/* AOS Container Styling */
+.about, .experience, .languages, .projects {
+  background-color: #4a4a4a; /* Black background for the surrounding AOS sections */
+  padding: 2rem; /* Add padding to keep the content nicely spaced */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.about, .experience, .languages, .projects {
+  margin-bottom: 2rem; /* Spacing between sections */
+}
+
+/* Ensure the inner content still retains its white background and proper styles */
+.project, .language-list div {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './components/Header';
+import About from './components/About';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Languages from './components/Languages';
+import Footer from './components/Footer';
 import './App.css';
+import 'aos/dist/aos.css'; // Animation library for scroll
+import AOS from 'aos'; // Import Animate On Scroll
 
 function App() {
+  // Initialize AOS for animations
+  React.useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <About />
+      <Experience />
+      <Languages />
+      <Projects />
+      <Footer />
     </div>
   );
 }
