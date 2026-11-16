@@ -13,20 +13,14 @@ const navItems = [
 export function Hero() {
   return (
     <section className="hero" aria-labelledby="intro-heading">
-      <div>
+      <div className="hero-copy">
         <p className="eyebrow">Houston, TX</p>
         <h1 id="intro-heading">Sydney Ani</h1>
-        <p className="role">
-          BI / Data Warehouse Developer
-          <span className="role-detail">Applied AI, Data &amp; Software Engineering</span>
+        <p className="headline">BI / Data Warehouse Developer &amp; Applied AI Engineer</p>
+        <p className="value-prop">
+          I build Snowflake warehouses, apply AI to data validation, and ship software in C#, Flutter, and Python.
         </p>
-        <p className="lede">
-          I have 5+ years of enterprise technology experience across data warehousing, BI, software engineering, and applied machine learning. I work in Snowflake every day, apply AI to data validation and engineering workflows, and build applications in C#, Flutter, and Python.
-        </p>
-        <p className="lede">
-          Currently a BI – Data Warehouse Developer at NOV/Auredia.
-        </p>
-        <ContactLinks />
+        <ContactLinks className="contact-links hero-actions" />
       </div>
       <div className="portrait">
         <img

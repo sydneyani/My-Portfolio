@@ -1,29 +1,30 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('presents Sydney Ani and public project repositories', () => {
+test('presents Sydney Ani, flagship work, and no private projects', () => {
   render(<App />);
 
+  expect(screen.getByRole('heading', { level: 1, name: 'Sydney Ani' })).toBeInTheDocument();
   expect(
-    screen.getByRole('heading', { level: 1, name: 'Sydney Ani' })
+    screen.getByText('BI / Data Warehouse Developer & Applied AI Engineer')
   ).toBeInTheDocument();
-  expect(screen.getByRole('link', { name: 'FormulAI' })).toHaveAttribute(
+  expect(
+    screen.getByRole('heading', { name: 'Data Scientist / Software Engineer' })
+  ).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: 'CiteGround' })).toHaveAttribute(
     'href',
-    'https://github.com/sydneyani/FormulAI'
+    'https://github.com/sydneyani/rag-eval-assistant'
   );
-  expect(screen.getByRole('link', { name: 'dotnet-flutter-app' })).toHaveAttribute(
+  expect(screen.getByRole('link', { name: 'Meridian' })).toHaveAttribute(
     'href',
     'https://github.com/sydneyani/dotnet-flutter-app'
   );
-  expect(screen.getByRole('link', { name: 'university-coursework' })).toHaveAttribute(
+  expect(screen.getAllByRole('link', { name: 'Resume' })[0]).toHaveAttribute(
     'href',
-    'https://github.com/sydneyani/university-coursework'
+    '/resume.html'
   );
-  expect(screen.getByRole('heading', { name: 'BI – Data Warehouse Developer' })).toBeInTheDocument();
-  expect(
-    screen.getByText('NVIDIA DLI — Building RAG Agents with LLMs (2025)')
-  ).toBeInTheDocument();
   expect(screen.queryByText(/scriptora/i)).not.toBeInTheDocument();
   expect(screen.queryByText(/stitch/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/\bTBD\b/)).not.toBeInTheDocument();
   expect(screen.queryByText(/password/i)).not.toBeInTheDocument();
 });

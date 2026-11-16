@@ -1,31 +1,26 @@
 import React from 'react';
-
-const certifications = [
-  'NVIDIA DLI — Building RAG Agents with LLMs (2025)',
-  'NVIDIA DLI — NLP Fundamentals (2025)',
-];
+import { certifications, education } from '../data/profile';
 
 function Education() {
   return (
     <section className="education" id="education">
-      <h2>Education</h2>
+      <div className="section-heading">
+        <p className="section-index">04</p>
+        <h2>Education &amp; certifications</h2>
+      </div>
       <div className="education-grid">
         <article className="education-card">
-          <h3>University of Houston</h3>
+          <h3>{education.school}</h3>
+          <p className="education-span">{education.span}</p>
+          {education.degrees.map((degree) => (
+            <p key={degree.name}>
+              <strong>{degree.name}</strong>
+              {degree.detail ? <span className="education-meta">{degree.detail}</span> : null}
+            </p>
+          ))}
           <p>
-            <strong>M.S. Engineering Data Science &amp; AI</strong>
-            <span className="education-meta">GPA 3.8 · Dec 2025</span>
-          </p>
-          <p>
-            <strong>B.S. Computer Information Systems</strong>
-          </p>
-          <p>
-            <a
-              href="https://github.com/sydneyani/university-coursework"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              University coursework (2021–2025)
+            <a href={education.coursework.href} target="_blank" rel="noopener noreferrer">
+              {education.coursework.label}
             </a>
           </p>
         </article>

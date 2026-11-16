@@ -1,24 +1,18 @@
 import React from 'react';
+import { contact } from '../data/profile';
 
 const links = [
-  { label: 'Email', href: 'mailto:580091sydney@gmail.com' },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/sydney-ani-1561471b8',
-    external: true,
-  },
-  {
-    label: 'GitHub',
-    href: 'https://github.com/sydneyani',
-    external: true,
-  },
+  { label: 'GitHub', href: contact.github, external: true },
+  { label: 'LinkedIn', href: contact.linkedin, external: true },
+  { label: 'Resume', href: contact.resume, external: true },
+  { label: 'Email', href: contact.email, external: false },
 ];
 
-function ContactLinks({ className = 'contact-links', label = 'Contact' }) {
+function ContactLinks({ className = 'contact-links' }) {
   return (
-    <ul className={className} aria-label={label}>
+    <ul className={className}>
       {links.map((link) => (
-        <li key={link.href}>
+        <li key={link.label}>
           <a
             href={link.href}
             {...(link.external
