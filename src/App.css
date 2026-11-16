@@ -73,6 +73,12 @@
 section {
   width: min(100% - 2rem, var(--max));
   margin: 0 auto;
+  scroll-margin-top: 5.75rem;
+}
+
+h1,
+h2 {
+  scroll-margin-top: 5.75rem;
 }
 
 .hero {
