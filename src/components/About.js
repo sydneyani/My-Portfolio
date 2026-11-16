@@ -1,21 +1,29 @@
 import React from 'react';
+import { focusAreas } from '../data/profile';
 
 function About() {
   return (
-    <section className="about" data-aos="fade-up">
-      <h2>About Me</h2>
-      <div className="about-container">
-        <div className="about-text">
-          <p>
-            I'm someone who is passionate about a wide range of things, from technology to entertainment. Outside of technology, I love staying active through boxing and, of course, enjoying good food! I'm a huge fan of Batman, and when I'm not diving into the world of coding or AI, you’ll often find me watching movies or playing video games. Building websites is something I love doing in my free time, and I’m constantly exploring new ways to improve my skills.
-          </p>
-          <p>
-            AI has always fascinated me, especially when it comes to how it can enhance everyday life. Whether it's automation or personalized experiences, I’m excited about the future of AI and its potential.
-          </p>
-        </div>
-        <div className="about-image">
-          <img src="/images/cb9cad23320df3bb-sticker.png" alt="Memoji" />
-        </div>
+    <section className="about" id="about">
+      <div className="section-heading">
+        <p className="section-index">01</p>
+        <h2>About</h2>
+      </div>
+      <div className="about-lead">
+        <p>
+          I have 5+ years of enterprise technology experience across data warehousing, BI, software engineering, and applied machine learning. I work in Snowflake every day, apply AI to data validation and engineering workflows, and build applications in C#, Flutter, and Python.
+        </p>
+        <p>Currently a BI – Data Warehouse Developer at NOV/Auredia.</p>
+        <p>
+          The public projects are the work I can show. Warehouse and application systems at NOV/Auredia stay in private company repositories.
+        </p>
+      </div>
+      <div className="focus-grid">
+        {focusAreas.map((area) => (
+          <article key={area.title} className="focus-card">
+            <h3>{area.title}</h3>
+            <p>{area.body}</p>
+          </article>
+        ))}
       </div>
     </section>
   );

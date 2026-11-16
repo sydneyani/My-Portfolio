@@ -1,19 +1,17 @@
 import React from 'react';
+import ContactLinks from './ContactLinks';
 
 function Footer() {
   return (
-    <footer className="footer">
-      <p>
-        Connect with me: 
-        <a 
-          href="https://www.linkedin.com/in/sydney-ani-1561471b8/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="social-link"
-        >
-          <i className="fab fa-linkedin"></i> LinkedIn
-        </a>
-      </p>
+    <footer className="footer" id="contact">
+      <div className="footer-inner">
+        <div className="section-heading">
+          <p className="section-index">06</p>
+          <h2>Contact</h2>
+        </div>
+        <p>Houston, TX</p>
+        <ContactLinks />
+      </div>
     </footer>
   );
 }
