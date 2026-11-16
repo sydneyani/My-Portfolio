@@ -21,7 +21,7 @@ const skillGroups = [
 
 function Skills() {
   return (
-    <section className="skills" id="skills" data-aos="fade-up">
+    <section className="skills" id="skills">
       <h2>Skills</h2>
       <div className="skill-groups">
         {skillGroups.map((group) => (

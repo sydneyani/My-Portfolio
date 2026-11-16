@@ -7,7 +7,7 @@ const certifications = [
 
 function Education() {
   return (
-    <section className="education" id="education" data-aos="fade-up">
+    <section className="education" id="education">
       <h2>Education</h2>
       <div className="education-grid">
         <article className="education-card">

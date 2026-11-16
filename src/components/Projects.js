@@ -98,7 +98,7 @@ function ProjectCard({ project, status }) {
 
 function Projects() {
   return (
-    <section className="projects" id="projects" data-aos="fade-up">
+    <section className="projects" id="projects">
       <h2>Projects</h2>
       <p className="section-lead">
         Personal and academic repositories. Enterprise systems at NOV/Auredia stay in private company environments.

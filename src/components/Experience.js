@@ -39,7 +39,7 @@ const experienceList = [
 
 function Experience() {
   return (
-    <section className="experience" id="experience" data-aos="fade-up">
+    <section className="experience" id="experience">
       <h2>Experience</h2>
       <div className="experience-list">
         {experienceList.map((experience) => (

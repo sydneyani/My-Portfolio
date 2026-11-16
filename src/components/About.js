@@ -21,14 +21,8 @@ const focusAreas = [
 
 function About() {
   return (
-    <section className="about" id="about" data-aos="fade-up">
-      <h2>About</h2>
-      <p className="section-lead">
-        I have 5+ years of enterprise technology experience across data warehousing, BI, software engineering, and applied machine learning. I work in Snowflake every day, apply AI to data validation and engineering workflows, and build applications in C#, Flutter, and Python.
-      </p>
-      <p className="section-lead">
-        Currently a BI – Data Warehouse Developer at NOV/Auredia.
-      </p>
+    <section className="about" id="about">
+      <h2>What I work on</h2>
       <div className="focus-grid">
         {focusAreas.map((area) => (
           <article key={area.title} className="focus-card">
