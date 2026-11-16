@@ -1,19 +1,15 @@
 :root {
-  --bg: #f4f1eb;
-  --bg-deep: #10242b;
-  --ink: #172027;
-  --muted: #44515a;
-  --line: #ddd6cb;
-  --card: #fffcf8;
-  --accent: #0f5f5a;
-  --accent-strong: #0b4541;
-  --accent-soft: #e5f3f1;
-  --progress: #7a4e0d;
-  --progress-soft: #f8ecd6;
-  --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
-  --sans: "Source Sans 3", "Segoe UI", sans-serif;
-  --max: 1080px;
-  color-scheme: light;
+  --bg: #090b10;
+  --bg-raise: #11141b;
+  --ink: #f4f1ea;
+  --muted: #b4bdc9;
+  --line: rgba(244, 241, 234, 0.12);
+  --accent: #d6ff4b;
+  --accent-ink: #14180c;
+  --serif: "Fraunces", "Iowan Old Style", Palatino, serif;
+  --sans: "Outfit", "Segoe UI", sans-serif;
+  --max: 1120px;
+  color-scheme: dark;
 }
 
 *,
@@ -28,7 +24,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    radial-gradient(900px 420px at 85% -10%, rgba(214, 255, 75, 0.08), transparent 60%),
+    var(--bg);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 1.05rem;
@@ -50,11 +48,11 @@ p {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 a {
-  color: var(--accent-strong);
+  color: var(--accent);
 }
 
 a:focus-visible,
