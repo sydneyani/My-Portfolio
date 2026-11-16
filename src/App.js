@@ -3,7 +3,8 @@ import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
-import Languages from './components/Languages';
+import Skills from './components/Skills';
+import Education from './components/Education';
 import Footer from './components/Footer';
 import './App.css';
 import 'aos/dist/aos.css'; // Animation library for scroll
@@ -20,7 +21,8 @@ function App() {
       <Header />
       <About />
       <Experience />
-      <Languages />
+      <Skills />
+      <Education />
       <Projects />
       <Footer />
     </div>
